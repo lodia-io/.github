@@ -1,0 +1,40 @@
+name: Bug report
+description: Lodia does something its docs say it does not, or fails to do what they say.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: A vulnerability goes through the [security policy](https://github.com/lodia-io/lodia/security/policy), never a public issue.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The smallest steps, on kind if you can, with the `ControlPlane` manifest.
+    validations:
+      required: true
+  - type: textarea
+    id: state
+    attributes:
+      label: Status and logs
+      description: "`kubectl get controlplane <name> -o yaml` and the controllers' logs around the failure."
+      render: text
+  - type: input
+    id: lodia
+    attributes:
+      label: Lodia commit or chart version
+    validations:
+      required: true
+  - type: input
+    id: kubernetes
+    attributes:
+      label: Kubernetes versions
+      description: The management cluster's, and the tenant's `spec.version`.
+    validations:
+      required: true
