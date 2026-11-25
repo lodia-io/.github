@@ -8,7 +8,7 @@
 Lodia runs Kubernetes control planes as pods on a management cluster, one per tenant cluster, and worker nodes anywhere join them with `kubeadm`.
 Each control plane is one `ControlPlane` object: a set of Deployments with an etcd of its own.
 
-The first release is `v0.1.0-alpha.1`, and phase 3 of the [roadmap](https://github.com/lodia-io/lodia/blob/main/docs/roadmap.md) is under way.
+The first release is `v0.1.0-alpha.1`.
 
 ```sh
 helm install lodia oci://ghcr.io/lodia-io/charts/lodia --version 0.1.0-alpha.1 -n lodia-system --create-namespace
